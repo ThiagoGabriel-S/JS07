@@ -1,0 +1,32 @@
+exercício 1:
+
+function verificarNumero(num){
+ 
+ if (num > 0) {
+    return "Positivo";
+  } else if (num < 0) {
+    return "Negativo";
+  } else {
+    return "Zero";
+  }
+}
+
+let numero = verificarNumero(10);
+let Numero = verificarNumero(-2);
+let number= verificarNumero();
+console.log(numero)
+console.log(Numero)
+console.log(number)
+
+exercício 2:
+
+const calcularDobro = (num) => num * 2;
+
+console.log(calcularDobro(5))
+console.log(calcularDobro(7))
+console.log(calcularDobro(10))
+
+exercício 3:
+
+
+
