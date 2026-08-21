@@ -28,5 +28,68 @@ console.log(calcularDobro(10))
 
 exercício 3:
 
+function criarContador() {
+    let count= 0;
+
+    return function () {
+        count++;
+        return count;
+    };
+}
+
+const contador1 = criarContador();
+const contador2 = criarContador();
+
+console.log(contador1());
+console.log(contador1());
+console.log(contador2());
+console.log(contador2());
+
+exercício 4:
+
+function Pessoa(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+    this.apresentar = function() {
+        return "Olá, meu nome é " + this.nome + " e tenho " + this.idade + " anos ";
+    };
+}
+
+const pessoa1 = new Pessoa ("Ana", 25)
+console.log(pessoa1.apresentar())
+
+exercício 5:
+
+function Calculadora (num1, num2, operacao) {
+    if (operacao === "soma") return num1 + num2;
+    if (operacao === "subtracao") return num1 - num2;
+    if (operacao === "multiplicacao") return num1 * num2;
+    if (operacao === "divisao") return num1 / num2;
+
+    return "Operação inválida"
+} 
+const calculadora = new Calculadora ()
+console.log(Calculadora(10, 5, "soma"))
+console.log(Calculadora(10, 2, "divisao"))
+console.log(Calculadora(25, 2, "multiplicacao"))
+
+exercício 6:
+
+function Saudacao (nome = "Visitante", idioma = "pt") {
+    if (idioma === "pt") return "Olá, " + nome + "!";
+    if (idioma === "en") return "Hello, " + nome + "!";
+    if (idioma === "es") return "Hola, " + nome + "!";
+
+    return "Idioma não suportado";
+}
+const saudacao = new Saudacao()
+console.log(Saudacao("Ana", "pt"))
+console.log(Saudacao("John", "en"))
+console.log(Saudacao("Carlos", "es"))
+console.log(Saudacao("Visitante", "pt"))
+
+exercício 7:
+
+
 
 
