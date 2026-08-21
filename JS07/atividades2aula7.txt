@@ -90,6 +90,51 @@ console.log(Saudacao("Visitante", "pt"))
 
 exercício 7:
 
+function processarArray(array, callback) {
+    const novoArray = [];
+
+    for (const elemento of array) {
+        novoArray.push(callback(elemento));
+    }
+
+    return novoArray;
+}
+
+function dobro(numero) {
+    return numero * 2;
+}
+
+const numeros = [1, 2, 3, 4, 5];
+
+const resultado = processarArray(numeros, dobro);
+
+console.log(resultado);
+
+exercício 8:
+
+function criarPessoa(nome, idade, cidade) {
+    return {
+        nome: nome,
+        idade: idade,
+        cidade: cidade,
+
+        exibir() {
+            console.log(
+                "Nome: " + this.nome +
+                ", Idade: " + this.idade +
+                ", Cidade: " + this.cidade
+            );
+        }
+    };
+}
+
+const pessoa1 = criarPessoa("Ana", 25, "São Paulo");
+const pessoa2 = criarPessoa("João", 30, "Rio de Janeiro");
+const pessoa3 = criarPessoa("Maria", 22, "Belo Horizonte");
+
+pessoa1.exibir();
+pessoa2.exibir();
+pessoa3.exibir();
 
 
 
